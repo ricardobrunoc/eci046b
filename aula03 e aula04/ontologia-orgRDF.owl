@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#"
+     xml:base="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#ENSINA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#ENSINA">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#ENSINADA_POR"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#PROFESSOR"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#DISCIPLINA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#ENSINADA_POR -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#ENSINADA_POR">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#DISCIPLINA"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#PROFESSOR"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#ESTUDA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#ESTUDA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#ALUNO"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#DISCIPLINA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#MATRICULA -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#MATRICULA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#ALUNO"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#NOME -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#NOME">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#DISCIPLINA"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#PESSOA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#NOME_FAMÍLIA -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#NOME_FAMÍLIA">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#PESSOA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#PRIMEIRO_NOME -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#PRIMEIRO_NOME">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#PESSOA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#ALUNO -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#ALUNO">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#PESSOA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#DISCIPLINA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#DISCIPLINA"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#GES201 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#GES201">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#DISCIPLINA"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#ONT101"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#ONT101 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#ONT101">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#DISCIPLINA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#PESSOA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#PESSOA"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#PROFESSOR -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#PROFESSOR">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#PESSOA"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#GESTAO-2018-02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#GESTAO-2018-02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#GES201"/>
+        <NOME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GESTAO ORGANIZACIONAL</NOME>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#PROF_JOAO -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#PROF_JOAO">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#PROFESSOR"/>
+        <NOME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JOAO MAURICIO PAULI MATHEUS</NOME>
+        <NOME_FAMÍLIA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MATHEUS</NOME_FAMÍLIA>
+        <PRIMEIRO_NOME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JOÃO</PRIMEIRO_NOME>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#RFM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#RFM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#ALUNO"/>
+        <NOME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RENATO FABIANO MATHEUS</NOME>
+        <NOME_FAMÍLIA rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MATHEUS</NOME_FAMÍLIA>
+        <PRIMEIRO_NOME rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RENATO</PRIMEIRO_NOME>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

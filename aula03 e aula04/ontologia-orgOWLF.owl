@@ -1,0 +1,106 @@
+Prefix(:=<http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/lenovo/ontologies/2018/7/ontologia-orgRDF>
+
+Declaration(Class(:ALUNO))
+Declaration(Class(:DISCIPLINA))
+Declaration(Class(:GES201))
+Declaration(Class(:ONT101))
+Declaration(Class(:PESSOA))
+Declaration(Class(:PROFESSOR))
+Declaration(ObjectProperty(:ENSINA))
+Declaration(ObjectProperty(:ENSINADA_POR))
+Declaration(DataProperty(:MATRICULA))
+Declaration(DataProperty(:NOME))
+Declaration(DataProperty(:NOME_FAMÍLIA))
+Declaration(DataProperty(:PRIMEIRO_NOME))
+Declaration(NamedIndividual(:PROF_JOAO))
+Declaration(NamedIndividual(:RFM))
+############################
+#   Object Properties
+############################
+
+# Object Property: :ENSINA (:ENSINA)
+
+InverseObjectProperties(:ENSINA :ENSINADA_POR)
+ObjectPropertyDomain(:ENSINA :PROFESSOR)
+ObjectPropertyRange(:ENSINA :DISCIPLINA)
+
+# Object Property: :ENSINADA_POR (:ENSINADA_POR)
+
+ObjectPropertyDomain(:ENSINADA_POR :DISCIPLINA)
+ObjectPropertyRange(:ENSINADA_POR :PROFESSOR)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :MATRICULA (:MATRICULA)
+
+DataPropertyDomain(:MATRICULA :ALUNO)
+DataPropertyRange(:MATRICULA xsd:integer)
+
+# Data Property: :NOME (:NOME)
+
+DataPropertyDomain(:NOME :DISCIPLINA)
+DataPropertyDomain(:NOME :PESSOA)
+DataPropertyRange(:NOME xsd:string)
+
+# Data Property: :NOME_FAMÍLIA (:NOME_FAMÍLIA)
+
+DataPropertyDomain(:NOME_FAMÍLIA :PESSOA)
+DataPropertyRange(:NOME_FAMÍLIA xsd:string)
+
+# Data Property: :PRIMEIRO_NOME (:PRIMEIRO_NOME)
+
+DataPropertyDomain(:PRIMEIRO_NOME :PESSOA)
+DataPropertyRange(:PRIMEIRO_NOME xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :ALUNO (:ALUNO)
+
+SubClassOf(:ALUNO :PESSOA)
+
+# Class: :GES201 (:GES201)
+
+SubClassOf(:GES201 :DISCIPLINA)
+DisjointClasses(:GES201 :ONT101)
+
+# Class: :ONT101 (:ONT101)
+
+SubClassOf(:ONT101 :DISCIPLINA)
+
+# Class: :PROFESSOR (:PROFESSOR)
+
+SubClassOf(:PROFESSOR :PESSOA)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :PROF_JOAO (:PROF_JOAO)
+
+ClassAssertion(:PROFESSOR :PROF_JOAO)
+
+# Individual: :RFM (:RFM)
+
+ClassAssertion(:ALUNO :RFM)
+DataPropertyAssertion(:NOME :RFM "RENATO FABIANO MATHEUS"^^xsd:string)
+DataPropertyAssertion(:NOME_FAMÍLIA :RFM "MATHEUS"^^xsd:string)
+DataPropertyAssertion(:PRIMEIRO_NOME :RFM "RENATO"^^xsd:string)
+
+
+)
