@@ -25,18 +25,8 @@
     <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#ensina -->
 
     <owl:ObjectProperty rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#ensina">
-        <owl:inverseOf rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#ensinada_por"/>
         <rdfs:domain rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Professor"/>
         <rdfs:range rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Disciplina"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#ensinada_por -->
-
-    <owl:ObjectProperty rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#ensinada_por">
-        <rdfs:domain rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Disciplina"/>
-        <rdfs:range rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Professor"/>
     </owl:ObjectProperty>
     
 
@@ -58,9 +48,30 @@
     
 
 
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#cargahoraria -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#cargahoraria">
+        <rdfs:domain rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Disciplina"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#horario -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#horario">
+        <rdfs:domain rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Disciplina"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#idade -->
 
-    <owl:DatatypeProperty rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#idade"/>
+    <owl:DatatypeProperty rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#idade">
+        <rdfs:domain rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -83,9 +94,30 @@
     
 
 
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#sala -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#sala">
+        <rdfs:domain rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Disciplina"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#sexo -->
 
-    <owl:DatatypeProperty rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#sexo"/>
+    <owl:DatatypeProperty rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#sexo">
+        <rdfs:domain rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#siape -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#siape">
+        <rdfs:domain rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Professor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -93,6 +125,15 @@
 
     <owl:DatatypeProperty rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#sobrenome">
         <rdfs:domain rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#software -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#software">
+        <rdfs:domain rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Ontologia"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -168,8 +209,48 @@
 
     <owl:NamedIndividual rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#Aluno001">
         <rdf:type rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Aluno"/>
+        <idade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</idade>
         <matricula rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015131765</matricula>
-        <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ricardo Bruno da Cruz Costa</nome>
+        <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ricardo Bruno</nome>
+        <sexo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Masculino</sexo>
+        <sobrenome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cruz Costa</sobrenome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#Aluno002 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#Aluno002">
+        <rdf:type rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Aluno"/>
+        <idade rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25</idade>
+        <matricula rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015968597</matricula>
+        <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jhonata James</nome>
+        <sexo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Masculino</sexo>
+        <sobrenome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ribeiro Oliveira</sobrenome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#Gestao1 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#Gestao1">
+        <rdf:type rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Gestao"/>
+        <cargahoraria rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60</cargahoraria>
+        <horario rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ter: 19:00 as 20:40</horario>
+        <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gestão de Pesquisa Clinica</nome>
+        <sala rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002</sala>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#Ontologia1 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#Ontologia1">
+        <rdf:type rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Ontologia"/>
+        <horario rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qui: 07:30 a 11:00</horario>
+        <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontolgia Computacional</nome>
+        <sala rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016/LTIB</sala>
+        <software rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protégé</software>
     </owl:NamedIndividual>
     
 
@@ -179,6 +260,7 @@
     <owl:NamedIndividual rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#Prof001">
         <rdf:type rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Professor"/>
         <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maurício Barcelos</nome>
+        <siape rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2202636</siape>
     </owl:NamedIndividual>
     
 
