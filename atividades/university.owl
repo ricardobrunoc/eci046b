@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/ricardobrunoc/eci046b/universidade.owl#"
+     xml:base="https://github.com/ricardobrunoc/eci046b/universidade.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:universidade="https://github.com/ricardobrunoc/eci046b/universidade.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#ensina -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#ensina">
+        <owl:inverseOf rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#ensinada_por"/>
+        <rdfs:domain rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Professor"/>
+        <rdfs:range rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Disciplina"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#ensinada_por -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#ensinada_por">
+        <rdfs:domain rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Disciplina"/>
+        <rdfs:range rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Professor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#estuda -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#estuda"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#idade -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#idade"/>
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#matricula -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#matricula">
+        <rdfs:domain rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Aluno"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#nome -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#nome">
+        <rdfs:domain rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Disciplina"/>
+        <rdfs:domain rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#sexo -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#sexo"/>
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#sobrenome -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#sobrenome">
+        <rdfs:domain rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#Aluno -->
+
+    <owl:Class rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#Aluno">
+        <rdfs:subClassOf rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#Disciplina -->
+
+    <owl:Class rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#Disciplina"/>
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#Gestao -->
+
+    <owl:Class rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#Gestao">
+        <rdfs:subClassOf rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Disciplina"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#Ontologia -->
+
+    <owl:Class rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#Ontologia">
+        <rdfs:subClassOf rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Disciplina"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#Pessoa -->
+
+    <owl:Class rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#Pessoa"/>
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#Professor -->
+
+    <owl:Class rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#Professor">
+        <rdfs:subClassOf rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#Aluno001 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#Aluno001">
+        <rdf:type rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Aluno"/>
+        <matricula rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015131765</matricula>
+        <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ricardo Bruno da Cruz Costa</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/ricardobrunoc/eci046b/universidade.owl#Prof001 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#Prof001">
+        <rdf:type rdf:resource="https://github.com/ricardobrunoc/eci046b/universidade.owl#Professor"/>
+        <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maurício Barcelos</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#Aluno"/>
+            <rdf:Description rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#Gestao"/>
+            <rdf:Description rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#Ontologia"/>
+            <rdf:Description rdf:about="https://github.com/ricardobrunoc/eci046b/universidade.owl#Professor"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
